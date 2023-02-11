@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace RTC_WPF_Assignment
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddProduct.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddProduct : Window
     {
-        public MainWindow()
+        public AddProduct()
         {
             InitializeComponent();
-        }
-
-        private void btnMemberInfo_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

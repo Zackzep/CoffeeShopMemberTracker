@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RTC_WPF_Assignment"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="446" Width="798" Background="#FFB3B45E">
+    <Canvas>
+        <ListBox x:Name="lbProducts" Height="317" Width="241" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="46" Canvas.Top="43" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Products" Canvas.Left="118" Canvas.Top="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" FontSize="20"/>
+        <Button x:Name="btnAddProduct" Content="Add New Product" Canvas.Left="86" Canvas.Top="380" Height="40" Width="162" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ListBox x:Name="lbTransactions" Height="317" Width="218" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="399" Canvas.Top="43" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Member Transactions" Canvas.Left="399" Canvas.Top="6" HorizontalAlignment="Left" VerticalAlignment="Center" Width="204" FontSize="20"/>
+        <Button x:Name="btnBuyProduct" Content="Buy&#xD;&#xA;Product" Canvas.Left="312" Canvas.Top="131" HorizontalAlignment="Center" VerticalAlignment="Top" Width="68" Height="56"/>
+        <Button x:Name="btnUsePoints" Content="Use&#xD;&#xA;Points" Canvas.Left="312" Canvas.Top="232" Height="55" Width="68" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ComboBox x:Name="cbMembers" Canvas.Left="629" Canvas.Top="67" Width="159" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Members" Canvas.Left="664" Canvas.Top="31" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" FontSize="16" RenderTransformOrigin="0.482,0.043"/>
+        <Button x:Name="btnMemberInfo" Content="Member Information" Canvas.Left="629" Canvas.Top="109" HorizontalAlignment="Center" VerticalAlignment="Center" Width="159" Height="21" Click="btnMemberInfo_Click"/>
+        <Label x:Name="lblUserPoints" Content="User Points:" Canvas.Left="654" Canvas.Top="159" HorizontalAlignment="Left" VerticalAlignment="Center" Width="112"/>
+    </Canvas>
 
-    </Grid>
 </Window>

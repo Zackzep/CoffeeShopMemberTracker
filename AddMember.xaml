@@ -1,0 +1,24 @@
+﻿<Window x:Class="RTC_WPF_Assignment.AddMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RTC_WPF_Assignment"
+        mc:Ignorable="d"
+        Title="AddMember" Height="450" Width="800" Background="#FFE3AD46">
+    <Canvas>
+        <TextBox x:Name="tbFirstName" Canvas.Left="27" TextWrapping="Wrap" Text="TextBox" Canvas.Top="49" Width="120"/>
+        <TextBox x:Name="tbLastName" Canvas.Left="27" TextWrapping="Wrap" Text="TextBox" Canvas.Top="98" Width="120"/>
+        <Label Content="First Name" Canvas.Left="27" Canvas.Top="18" HorizontalAlignment="Left" VerticalAlignment="Center" Width="102"/>
+        <Label Content="Last Name" Canvas.Left="27" Canvas.Top="72" HorizontalAlignment="Left" VerticalAlignment="Center" Width="102"/>
+        <GroupBox x:Name="gbMembershipType" Height="97" Header="Membership Type" Width="170" Canvas.Left="27" Canvas.Top="137" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFD6B77D"/>
+        <RadioButton x:Name="rbRegularMember" Content="Regular" Canvas.Left="45" Canvas.Top="171"/>
+        <RadioButton x:Name="rbGoldMember" Content="Gold" Canvas.Left="45" Canvas.Top="202"/>
+        <Button x:Name="btnAddMember" Content="Add Member" Canvas.Left="43" Canvas.Top="264" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Height="37"/>
+        <ListBox x:Name="lbMembers" Height="342" Width="242" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="255" Canvas.Top="57" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Members" Canvas.Left="328" Canvas.Top="13" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Width="96"/>
+        <ListBox x:Name="lbTransHistory" Height="341" Width="242" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="533" Canvas.Top="58" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Transaction History" Canvas.Left="564" Canvas.Top="13" HorizontalAlignment="Left" VerticalAlignment="Center" Width="180" FontSize="20"/>
+    </Canvas>
+
+</Window>
