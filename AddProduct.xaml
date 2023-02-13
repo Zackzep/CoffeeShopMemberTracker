@@ -26,20 +26,20 @@
         <GroupBox Height="70" Header="Merchandise" Width="228" Canvas.Left="10" Canvas.Top="314" Background="#FFEBB7B7" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbDrinkSize" Canvas.Left="110" Canvas.Top="139" Width="120"/>
         <TextBox x:Name="tbCoffeeTeaType" Canvas.Left="110" TextWrapping="Wrap" Text="TextBox" Canvas.Top="166" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Button x:Name="btnTea" Content="Tea" Canvas.Left="146" Canvas.Top="188" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84"/>
-        <Button x:Name="btnCoffee" Content="Coffee" Canvas.Left="21" Canvas.Top="188" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84"/>
+        <Button x:Name="btnTea" Content="Tea" Canvas.Left="146" Canvas.Top="188" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Click="btnTea_Click"/>
+        <Button x:Name="btnCoffee" Content="Coffee" Canvas.Left="21" Canvas.Top="188" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Click="btnCoffee_Click"/>
         <Label Content="Size" Canvas.Left="16" Canvas.Top="137" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="Roast/Tea Type" Canvas.Left="16" Canvas.Top="162"/>
         <CheckBox x:Name="chkHeat" Content="Heated" Canvas.Left="37" Canvas.Top="238"/>
         <CheckBox x:Name="chkDairy" Content="Dairy" Canvas.Left="140" Canvas.Top="238"/>
         <CheckBox x:Name="chkCombo" Content="Combo" Canvas.Left="37" Canvas.Top="258" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <CheckBox x:Name="chkGluten" Content="Gluten" Canvas.Left="140" Canvas.Top="258"/>
-        <Button x:Name="btnBreakfast" Content="Breakfast" Canvas.Left="37" Canvas.Top="278" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="75"/>
-        <Button x:Name="btnLunch" Content="Lunch" Canvas.Left="140" Canvas.Top="278" Height="24" Width="72"/>
+        <Button x:Name="btnBreakfast" Content="Breakfast" Canvas.Left="37" Canvas.Top="278" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="75" Click="btnBreakfast_Click"/>
+        <Button x:Name="btnLunch" Content="Lunch" Canvas.Left="140" Canvas.Top="278" Height="24" Width="72" Click="btnLunch_Click"/>
         <TextBox x:Name="tbStyle" Canvas.Left="108" TextWrapping="Wrap" Text="TextBox" Canvas.Top="331" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="Color or Style" Canvas.Left="19" Canvas.Top="327"/>
-        <Button x:Name="btnTumbler" Content="Tumbler" Canvas.Left="19" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88"/>
-        <Button x:Name="btnMug" Content="Mug" Canvas.Left="148" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="80"/>
+        <Button x:Name="btnTumbler" Content="Tumbler" Canvas.Left="19" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Click="btnTumbler_Click"/>
+        <Button x:Name="btnMug" Content="Mug" Canvas.Left="148" Canvas.Top="353" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="80" Click="btnMug_Click"/>
         <GroupBox Height="47" Header="Gift Card" Width="228" Canvas.Left="10" Canvas.Top="384" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Background="#FFEBB7B7">
             <GroupBox.RenderTransform>
                 <TransformGroup>
@@ -50,7 +50,7 @@
                 </TransformGroup>
             </GroupBox.RenderTransform>
         </GroupBox>
-        <Button x:Name="btnGiftCard" Content="Add a Gift Card" Canvas.Left="41" Canvas.Top="404" HorizontalAlignment="Left" VerticalAlignment="Center" Width="166"/>
+        <Button x:Name="btnGiftCard" Content="Add a Gift Card" Canvas.Left="41" Canvas.Top="404" HorizontalAlignment="Left" VerticalAlignment="Center" Width="166" Click="btnGiftCard_Click"/>
         <Label Content="Name" Canvas.Left="16" Canvas.Top="15"/>
         <Label Content="Price" Canvas.Left="16" Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Center" Width="62"/>
         <Label Content="Points" Canvas.Left="16" Canvas.Top="83"/>

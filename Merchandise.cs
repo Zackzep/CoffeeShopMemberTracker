@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace RTC_WPF_Assignment
 {
-    abstract public class Merchandise : Product
+    //Abstract class to be child of product and parent of others
+    public abstract class Merchandise : Product
     {
-        
+        //Constructor to connect classes
+        public Merchandise(string name, decimal price, int points) : base(name, price, points)
+        {
+        }
     }
 }

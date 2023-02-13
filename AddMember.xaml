@@ -14,8 +14,8 @@
         <GroupBox x:Name="gbMembershipType" Height="97" Header="Membership Type" Width="170" Canvas.Left="27" Canvas.Top="137" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFD6B77D"/>
         <RadioButton x:Name="rbRegularMember" Content="Regular" Canvas.Left="45" Canvas.Top="171"/>
         <RadioButton x:Name="rbGoldMember" Content="Gold" Canvas.Left="45" Canvas.Top="202"/>
-        <Button x:Name="btnAddMember" Content="Add Member" Canvas.Left="43" Canvas.Top="264" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Height="37"/>
-        <ListBox x:Name="lbMembers" Height="342" Width="242" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="255" Canvas.Top="57" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddMember" Content="Add Member" Canvas.Left="43" Canvas.Top="264" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Height="37" Click="btnAddMember_Click"/>
+        <ListBox x:Name="lbMembers" Height="342" Width="242" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="255" Canvas.Top="57" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="lbMembers_SelectionChanged"/>
         <Label Content="Members" Canvas.Left="328" Canvas.Top="13" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Width="96"/>
         <ListBox x:Name="lbTransHistory" Height="341" Width="242" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="533" Canvas.Top="58" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Label Content="Transaction History" Canvas.Left="564" Canvas.Top="13" HorizontalAlignment="Left" VerticalAlignment="Center" Width="180" FontSize="20"/>

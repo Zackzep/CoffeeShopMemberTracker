@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -8,39 +9,54 @@ using System.Threading.Tasks;
 
 namespace RTC_WPF_Assignment
 {
-    public class Data
+    class Data
     {
-        static ObservableCollection<Member> _members;
-        static ObservableCollection<Product> _products;
-        static Member currentMember = null;
-        static Product currentProduct = null;
+        //Static fields to connect data class with the rest of project(members and products collections, and
+        //current fields to work with updating in events)
+        public static ObservableCollection<Member> _members;
+        public static ObservableCollection<Product> _products;
+        public static Member _currentMember = null;
+        public static Product _currentProduct = null;
 
+        //Static constructor
         static Data()
         {
-            Members = new ObservableCollection<Member>();
-            Products = new ObservableCollection<Product>();
+            //Instantiate observable collections in constructor
+            _members = new ObservableCollection<Member>();
+            _products = new ObservableCollection<Product>();
         }
 
+        //Properties -- only get Members and Products so they can't be changed, but have set for current so they can be manipulated
+        //in events
         public static ObservableCollection<Member> Members { get => _members; }
         public static ObservableCollection<Product> Products { get => _products; }
-        public static Member CurrentMember { get => currentMember; }
-        public static Product CurrentProduct { get => currentProduct; }
+        public static Member CurrentMember { get => _currentMember; set => _currentMember = value; }
+        public static Product CurrentProduct { get => _currentProduct; set => _currentProduct = value;  }
 
-        public void AddProductToCollection(Product)
+        //Method to add product to collection
+        public static void AddProductToCollection(Product product)
         {
-            _products.Add(currentProduct);
+            _products.Add(product);
         }
-        public void AddMemberToCollection(Member)
-        {
-            _members.Add(currentMember);
-        }
-        public void UpdateCurrentProduct(Product)
-        {
 
-        }
-        public void UpdateCurrentMember(Member)
+        //Method to add member to collection
+        public static void AddMemberToCollection(Member member)
         {
-
+            _members.Add(member);
         }
+
+        //Selected index methods used for updating products and members based on selection
+        public static void UpdateCurrentProduct(Product product)
+        {
+            //Takes product and sets it as current product
+            _currentProduct = product;
+        }
+        public static void UpdateCurrentMember(Member member)
+        {
+            //Takes member and sets it as current member
+            _currentMember = member;
+        }
+
+        
     }
 }

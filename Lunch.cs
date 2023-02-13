@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace RTC_WPF_Assignment
 {
+    //Class set to be child of food
     public class Lunch : Food
     {
+        //Fields
         public bool _hasDairy;
         public bool _hasGluten;
         public bool _isCombo;
 
-        public Lunch(bool hasDairy, bool hasGluten, bool isCombo)
+        //Constructor to take fields that will be inputs on top of base constructor
+        public Lunch(string name, decimal price, int points, bool isHeated, bool hasDairy, bool hasGluten, bool isCombo) : base(name, price, points, isHeated)
         {
             _hasDairy = hasDairy;
             _hasGluten = hasGluten;
             _isCombo = isCombo;
         }
+
+        //String ovveride to add to product and food string overrides
         public override string ToString()
         {
-            return base.ToString() + $"{_hasDairy} - {_hasGluten} - {_isCombo}";
+            return base.ToString() + $" - Dairy: {_hasDairy} - Gluten: {_hasGluten} - Combo: {_isCombo}";
         }
     }
 }

@@ -6,18 +6,22 @@ using System.Threading.Tasks;
 
 namespace RTC_WPF_Assignment
 {
+    //Class to be child of merchandise
     public class Tumblers : Merchandise
     {
+        //Field
         public string _color;
 
-        public Tumblers(string color)
+        //Constructor to take field that will be inputs on top of base constructor
+        public Tumblers(string name, decimal price, int points, string color) : base(name, price, points)
         {
             _color = color;
         }
 
+        //String override to add to product string override
         public override string ToString()
         {
-            return base.ToString() + $"{_color}";
+            return base.ToString() + $" - Color: {_color}";
         }
     }
 }
